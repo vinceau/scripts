@@ -31,6 +31,13 @@ echo " > remove dock delay"
 defaults write com.apple.dock autohide-delay -float 0
 # Remove the animation when hiding/showing the Dock
 defaults write com.apple.dock autohide-time-modifier -float 0
+# show the dock instantly
+defaults write com.apple.dock launchanim -bool false
+# speed up mission control animations
+defaults write com.apple.dock expose-animation-duration -float 0.1
+
+# stop switching desktops/spaces for me
+defaults write com.apple.dock workspaces-auto-swoosh -bool NO
 
 echo " > disable accent characters on vowel key hold"
 defaults write -g ApplePressAndHoldEnabled -bool false
